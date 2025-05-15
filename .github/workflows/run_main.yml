@@ -3,7 +3,7 @@ name: Run daily main.py
 on:
   workflow_dispatch:
   schedule:
-    - cron: '10 17 * * *'  # Her gün 00:05'te çalışır
+    - cron: '15 17 * * *'  # Her gün 00:05'te çalışır
 
 jobs:
   run-script:
