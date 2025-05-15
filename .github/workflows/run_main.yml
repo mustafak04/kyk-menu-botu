@@ -3,7 +3,7 @@ name: Run daily main.py
 on:
   workflow_dispatch:
   schedule:
-    - cron: '19 17 * * *'  # Her gün 00:05'te çalışır
+    - cron: '25 17 * * *'  # Her gün 00:05'te çalışır
 
 jobs:
   run-script:
@@ -27,4 +27,5 @@ jobs:
       env:
         TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
         TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+        WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
       run: python main.py

@@ -73,12 +73,13 @@ def send_whatsapp(message):
         # Twilio ayarları (kendi bilgilerinizle değiştirin)
         account_sid = os.getenv("TWILIO_ACCOUNT_SID")
         auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+        to_number = os.getenv("WHATSAPP_TO")
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
             body=message,
             from_='whatsapp:+14155238886',
-            to='whatsapp:+905416029315'
+            to=to_number
         )
         return True
     except Exception as e:
