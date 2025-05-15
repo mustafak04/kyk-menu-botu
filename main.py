@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import datetime
 import sys
 import time
+import os
 
 def get_daily_menu():
     driver = None
@@ -70,8 +71,8 @@ def get_daily_menu():
 def send_whatsapp(message):
     try:
         # Twilio ayarları (kendi bilgilerinizle değiştirin)
-        account_sid = 'AC43af9c855fce9c677af8b7ec3f0a7721'
-        auth_token = '551aa3a234796e6e35444a85798f4210'
+        account_sid = os.getenv("TWILIO_ACCOUNT_SID")
+        auth_token = os.getenv("TWILIO_AUTH_TOKEN")
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
