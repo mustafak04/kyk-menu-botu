@@ -1,9 +1,9 @@
-name: Run daily main.py
+name: Gunluk Menu Tetikleyici
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '42 17 * * *'  # Her gün 00:05'te çalışır
+    - cron: '5 0 * * *'  # Her gün 00:05'te çalışır
 
 jobs:
   run-script:
