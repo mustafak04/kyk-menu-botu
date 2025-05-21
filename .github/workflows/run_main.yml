@@ -3,7 +3,7 @@ name: Gunluk Menu Tetikleyici
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 19 * * *'  # Her gün 00:05'te çalışır
+    - cron: '5 20 * * *'  # Her gün 00:05'te çalışır
 
 jobs:
   run-script:
